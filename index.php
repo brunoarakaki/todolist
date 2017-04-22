@@ -1,6 +1,4 @@
-<?php include_once("index.html");
-
-
+<?php
 $servername = "104.198.224.126";
 $username = "root";
 $password = "root";
@@ -22,6 +20,9 @@ $result = $conn->query($sql);
 while($row = $result->fetch_assoc()) {
     echo "id: " . $row["id"]. " - Description: " . $row["description"]. "<br>";
 }
+
+$html_index = file_get_contents(__DIR__ . '/index.html');
+echo($html_index);
 
 $conn->close();
 ?>
