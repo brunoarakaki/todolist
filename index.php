@@ -9,18 +9,18 @@ function get_item_html($item_id, $item_description) {
     return str_replace("%DESCRIPTION%", $item_description , $html_list_item);
 }
 
-if(isset($_POST['addTodo'])){ //check if form was submitted
-  $input = $_POST['description']; //get input text
-  $message = "Success! You entered: ".$input;
-  echo($message);
-}
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
+}
+
+if(isset($_POST['addTodo'])){ //check if form was submitted
+  $description = $_POST['description']; //get input text
+  $sql_add = "INSERT INTO todo (description) VALUES ('". $description ."')";
+  $conn->query($sql_add);
 }
 
 // Get items from db
