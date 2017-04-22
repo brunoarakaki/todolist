@@ -12,6 +12,7 @@ function get_item_html($item_id, $item_description) {
 if(isset($_POST['addTodo'])){ //check if form was submitted
   $input = $_POST['description']; //get input text
   $message = "Success! You entered: ".$input;
+  echo($message);
 }
 
 // Create connection
