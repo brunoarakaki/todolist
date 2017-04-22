@@ -6,7 +6,9 @@ $dbname = "todo";
 
 function get_item_html($item_id, $item_description) {
     $html_list_item = file_get_contents(__DIR__ . '/list-item.html');
-    return str_replace("%DESCRIPTION%", $item_description , $html_list_item);
+    $html_list_item = str_replace("%DESCRIPTION%", $item_description , $html_list_item);
+    $html_list_item = str_replace("%ITEM_ID%", $item_id , $html_list_item);
+    return $html_list_item;
 }
 
 // Create connection
@@ -17,9 +19,17 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+// CREATE NEW ITEM
 if(isset($_POST['addTodo'])){ //check if form was submitted
   $description = $_POST['description']; //get input text
   $sql_add = "INSERT INTO todo (description) VALUES ('". $description ."')";
+  $conn->query($sql_add);
+}
+
+// DELETE ITEM
+if(isset($_POST['deleteTodo'])){ //check if form was submitted
+  $item_id = $_POST['itemId']; //get input text
+  $sql_add = "DELETE FROM todo WHERE id=". $item_id ;
   $conn->query($sql_add);
 }
 

@@ -1,6 +1,9 @@
 <div class="list-group-item">
   <div class="row">
-    <button type="button" class="btn btn-success">Done</button>
+    <form method="post">
+      <input type="hidden" name="itemId" value="%ITEM_ID%" />
+      <button type="button" class="btn btn-success" type="submit" name="deleteTodo">Done</button>
+    </form>
     %DESCRIPTION%
   </div><!-- row-->
 </div><!-- list-group-item-->
