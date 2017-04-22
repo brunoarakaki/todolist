@@ -11,28 +11,41 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>Bruno's TODO list</h1>
+  <div class="container">
+    <!-- TITLE-->
+    <h1>Bruno's TODO list</h1>
+
+    <!-- INPUT FORM-->
     <div class="row">
-
       <div class="input-group">
-         <input type="text" class="form-control" placeholder="New TODO">
-         <span class="input-group-btn">
-           <button class="btn btn-default" type="button">Add</button>
-         </span>
-      </div>
+        <input type="text" class="form-control" placeholder="New TODO">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Add</button>
+        </span>
+      </div><!-- input-group-->
+    </div><!-- row-->
 
-   </div>
-  <div class="row">
-      <ul class="list-group">
-          <li class="list-group-item">Cras justo odio</li>
-          <li class="list-group-item">Dapibus ac facilisis in</li>
-          <li class="list-group-item">Morbi leo risus</li>
-          <li class="list-group-item">Porta ac consectetur ac</li>
-          <li class="list-group-item">Vestibulum at eros</li>
-      </ul>
+    <!-- TODO LIST-->
+    <div class="row">
+      <div class="list-group">
 
-    </div>
-</div>
+        <div class="list-group-item">
+          <div class="row">
+            <button type="button" class="btn btn-success">Done</button>
+            Cras justo odio
+          </div><!-- row-->
+        </div><!-- list-group-item-->
+
+          <div class="list-group-item">
+            <div class="row">
+              <button type="button" class="btn btn-success">Done</button>
+              Cras justo odio
+            </div><!-- row-->
+          </div><!-- list-group-item-->
+
+      </div><!-- list-group-->
+    </div><!-- row-->
+
+  </div><!-- container-->
   </body>
 </html>
