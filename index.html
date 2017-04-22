@@ -16,14 +16,16 @@
     <h1>Bruno's TODO list</h1>
 
     <!-- INPUT FORM-->
-    <div class="row">
-      <div class="input-group">
-        <input type="text" class="form-control" placeholder="New TODO">
-        <span class="input-group-btn">
-          <button class="btn btn-default" type="button">Add</button>
-        </span>
-      </div><!-- input-group-->
-    </div><!-- row-->
+    <form method="post">
+      <div class="row">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="New TODO" id="description">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit" name="addTodo">Add</button>
+          </span>
+        </div><!-- input-group-->
+      </div><!-- row-->
+    </form>
 
     <!-- TODO LIST-->
     <div class="row">
