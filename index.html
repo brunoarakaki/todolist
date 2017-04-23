@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN""http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>TODO List</title>
+    <!-- BOOTSTRAP-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </head>
+  <body>
+  <div class="container">
+    <!-- TITLE-->
+    <h1>Bruno's TODO list</h1>
+
+    <!-- INPUT FORM-->
+    <form method="post">
+      <div class="row">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="New TODO" name="description" id="description">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="submit" name="addTodo">Add</button>
+          </span>
+        </div><!-- input-group-->
+      </div><!-- row-->
+    </form>
+
+    <!-- TODO LIST-->
+    <div class="row">
+      <div class="list-group">
+        %LIST_ITEMS%
+      </div><!-- list-group-->
+    </div><!-- row-->
+
+  </div><!-- container-->
+  </body>
+</html>
